@@ -95,11 +95,16 @@
 
 .gallery-list-item {
   width: calc((100% - 2 * 24px) / 3);
-  height: 350px;
+  height: 300px;
 }
 .gallery-list-item table {
   width: 100%;
   text-align: center;
+}
+
+.gallery-list-item img {
+  height: 250px;
+  margin: 0 auto;
 }
 
 .loadText {
