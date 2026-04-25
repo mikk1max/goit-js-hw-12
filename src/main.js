@@ -121,5 +121,3 @@ loadBtn.addEventListener('click', async e => {
 photos.on('show.simplelightbox', () => {
   console.log('SimpleLightbox opened');
 });
-
-export { currentPage };

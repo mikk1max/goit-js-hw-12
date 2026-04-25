@@ -1,21 +1,15 @@
 const gallery = document.querySelector('.gallery');
-import { currentPage } from '../main';
+const loaderEl = document.querySelector('.loader');
 
 export function showLoader() {
-  const loaderHTML = `<li class="loadText loader-item"><span class="loader"></span></li>`;
-  gallery.insertAdjacentHTML('beforeend', loaderHTML);
+  loaderEl.classList.remove('is-hidden');
 }
 
 export function hideLoader() {
-  const loaderItem = document.querySelector('.loader-item');
-  if (loaderItem) {
-    loaderItem.remove();
-  }
+  loaderEl.classList.add('is-hidden');
 }
 
 const renderItems = data => {
-  console.log(data);
-
   const markup = data.hits
     .map(
       item => `<li class="gallery-list-item">
@@ -38,11 +32,7 @@ const renderItems = data => {
     )
     .join('');
 
-  if (currentPage === 1) {
-    gallery.innerHTML = markup;
-  } else {
-    gallery.insertAdjacentHTML('beforeend', markup);
-  }
+  gallery.insertAdjacentHTML('beforeend', markup);
 };
 
 export default renderItems;

@@ -124,9 +124,14 @@
   border: 5px solid #ff6b0b;
   border-bottom-color: rgb(1, 1, 1);
   border-radius: 50%;
-  display: inline-block;
+  display: block;
+  margin: 32px auto;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
+}
+
+.is-hidden {
+  display: none;
 }
 
 @keyframes rotation {
